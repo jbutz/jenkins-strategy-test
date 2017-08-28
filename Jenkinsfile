@@ -9,4 +9,6 @@ node {
    stage 'Build'
 
    sh "cat README.md"
+   sh "echo 'Hello World'"
+   sh "echo 'Foo Bar 23542354'"
 }

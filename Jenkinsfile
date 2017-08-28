@@ -9,4 +9,5 @@ node {
    stage 'Build'
 
    sh "echo 'Hello World'"
+   sh "echo 'Foo Bar 23542354'"
 }

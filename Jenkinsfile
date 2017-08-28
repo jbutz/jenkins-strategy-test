@@ -9,5 +9,4 @@ node {
    stage 'Build'
 
    sh "cat README.md"
-   sh "echo 'Foo Bar 23542354'"
 }

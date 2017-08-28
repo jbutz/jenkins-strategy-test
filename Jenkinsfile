@@ -9,4 +9,5 @@ node {
    stage 'Build'
 
    sh "cat README.md"
+   sh "cat Jenkinsfile"
 }

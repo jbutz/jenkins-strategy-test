@@ -12,5 +12,6 @@ node {
    sh "cat Jenkinsfile"
    
    echo "Branch Name: $BRANCH_NAME"
-   echo "Change Target: $CHANGE_TARGET"
+   sh "printenv"
+
 }

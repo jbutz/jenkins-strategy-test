@@ -12,6 +12,6 @@ node {
    sh "cat Jenkinsfile"
    
    echo "Branch Name: $BRANCH_NAME"
-
    sh "printenv"
+
 }

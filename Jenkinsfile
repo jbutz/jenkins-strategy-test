@@ -10,4 +10,5 @@ node {
 
    sh "cat README.md"
    sh "cat Jenkinsfile"
+   echo "Hello World"
 }

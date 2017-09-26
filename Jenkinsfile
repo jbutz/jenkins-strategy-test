@@ -10,4 +10,7 @@ node {
 
    sh "cat README.md"
    sh "cat Jenkinsfile"
+   
+   echo "Branch Name: $BRANCH_NAME"
+   echo "Change Target: $CHANGE_TARGET"
 }

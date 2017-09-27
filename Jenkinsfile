@@ -7,7 +7,7 @@ node {
    def now = sh returnStdout: true, script: 'date | tr -d "\n"'
    
    // currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
-   currentBuild.description = "Build #${BUILD_NUMBER}\n${now}\nBranch: ${BRANCH_NAME}\nCommit Hash: ${scmVars.GIT_COMMIT}\nVersion: ???\nEC2 Instance: ???"
+   currentBuild.description = "Build #${BUILD_NUMBER}<br />${now}<br />Branch: ${BRANCH_NAME}<br />Commit Hash: ${scmVars.GIT_COMMIT}<br />Version: ???<br />EC2 Instance: ???"
    
    // Mark the code build 'stage'....
    stage 'Build'

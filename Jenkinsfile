@@ -5,6 +5,10 @@ node {
    // Checkout code from repository
    def scmVars = checkout scm
    
+   echo "$scmVars"
+   
+   currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
+   
    // Mark the code build 'stage'....
    stage 'Build'
 
@@ -13,10 +17,6 @@ node {
    
    echo "Branch Name: $BRANCH_NAME"
    sh "printenv"
-   
 
    
-   currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
-
-   echo $scmVars
 }

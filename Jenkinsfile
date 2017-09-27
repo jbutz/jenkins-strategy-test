@@ -4,7 +4,7 @@ node {
 
    // Checkout code from repository
    def scmVars = checkout scm
-   def now = sh returnStdout: true, script: 'date'
+   def now = sh returnStdout: true, script: 'date | tr -d "\n"'
    
    // currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
    currentBuild.description = "Build #${BUILD_NUMBER}\n${now}\nBranch: ${BRANCH_NAME}\nCommit Hash: ${scmVars.GIT_COMMIT}"

@@ -3,8 +3,8 @@ node {
    stage 'Checkout'
 
    // Checkout code from repository
-   checkout scm
-
+   def scmVars = checkout scm
+   
    // Mark the code build 'stage'....
    stage 'Build'
 
@@ -13,5 +13,10 @@ node {
    
    echo "Branch Name: $BRANCH_NAME"
    sh "printenv"
+   
 
+   
+   currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
+
+   echo $scmVars
 }

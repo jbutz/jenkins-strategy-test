@@ -7,7 +7,8 @@ node {
    
    echo "$scmVars"
    
-   currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
+   // currentBuild.displayName = "#${BUILD_NUMBER} | ${BRANCH_NAME} | ${scmVars.GIT_COMMIT}"
+   currentBuild.description = "Build #${BUILD_NUMBER}\nBranch: ${BRANCH_NAME}\nCommit Hash: ${scmVars.GIT_COMMIT}"
    
    // Mark the code build 'stage'....
    stage 'Build'
